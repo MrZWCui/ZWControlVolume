@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE2078C028CF09D200888D97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2078BF28CF09D200888D97 /* AppDelegate.m */; };
-		CE2078C328CF09D200888D97 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2078C228CF09D200888D97 /* SceneDelegate.m */; };
 		CE2078C628CF09D200888D97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2078C528CF09D200888D97 /* ViewController.m */; };
-		CE2078C928CF09D200888D97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2078C728CF09D200888D97 /* Main.storyboard */; };
 		CE2078CB28CF09D400888D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2078CA28CF09D400888D97 /* Assets.xcassets */; };
 		CE2078CE28CF09D400888D97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2078CC28CF09D400888D97 /* LaunchScreen.storyboard */; };
 		CE2078D128CF09D400888D97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2078D028CF09D400888D97 /* main.m */; };
@@ -20,15 +18,13 @@
 		CE2078BB28CF09D200888D97 /* ZWControlVolume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWControlVolume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2078BE28CF09D200888D97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE2078BF28CF09D200888D97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE2078C128CF09D200888D97 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		CE2078C228CF09D200888D97 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		CE2078C428CF09D200888D97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE2078C528CF09D200888D97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CE2078C828CF09D200888D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE2078CA28CF09D400888D97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2078CD28CF09D400888D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2078CF28CF09D400888D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2078D028CF09D400888D97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE571FEC28D2C2A200FFBE97 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +43,7 @@
 			children = (
 				CE2078BD28CF09D200888D97 /* ZWControlVolume */,
 				CE2078BC28CF09D200888D97 /* Products */,
+				CE571FEB28D2C2A200FFBE97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,17 +60,22 @@
 			children = (
 				CE2078BE28CF09D200888D97 /* AppDelegate.h */,
 				CE2078BF28CF09D200888D97 /* AppDelegate.m */,
-				CE2078C128CF09D200888D97 /* SceneDelegate.h */,
-				CE2078C228CF09D200888D97 /* SceneDelegate.m */,
 				CE2078C428CF09D200888D97 /* ViewController.h */,
 				CE2078C528CF09D200888D97 /* ViewController.m */,
-				CE2078C728CF09D200888D97 /* Main.storyboard */,
 				CE2078CA28CF09D400888D97 /* Assets.xcassets */,
 				CE2078CC28CF09D400888D97 /* LaunchScreen.storyboard */,
 				CE2078CF28CF09D400888D97 /* Info.plist */,
 				CE2078D028CF09D400888D97 /* main.m */,
 			);
 			path = ZWControlVolume;
+			sourceTree = "<group>";
+		};
+		CE571FEB28D2C2A200FFBE97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE571FEC28D2C2A200FFBE97 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +137,6 @@
 			files = (
 				CE2078CE28CF09D400888D97 /* LaunchScreen.storyboard in Resources */,
 				CE2078CB28CF09D400888D97 /* Assets.xcassets in Resources */,
-				CE2078C928CF09D200888D97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,21 +150,12 @@
 				CE2078C628CF09D200888D97 /* ViewController.m in Sources */,
 				CE2078C028CF09D200888D97 /* AppDelegate.m in Sources */,
 				CE2078D128CF09D400888D97 /* main.m in Sources */,
-				CE2078C328CF09D200888D97 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE2078C728CF09D200888D97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE2078C828CF09D200888D97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE2078CC28CF09D400888D97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +289,6 @@
 				INFOPLIST_FILE = ZWControlVolume/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +315,6 @@
 				INFOPLIST_FILE = ZWControlVolume/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
